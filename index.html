@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aegis • Privacy-first Agentic AI Operating System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
+        
+        :root {
+            --font-sans: 'Inter', system_ui, sans-serif;
+            --font-display: 'Space Grotesk', 'Inter', system_ui, sans-serif;
+        }
+        
+        body {
+            font-family: var(--font-sans);
+        }
+        
+        .heading {
+            font-family: var(--font-display);
+            font-weight: 600;
+            letter-spacing: -0.04em;
+        }
+
+        .section-header {
+            font-size: 2.75rem;
+            line-height: 1.05;
+            font-weight: 600;
+            letter-spacing: -0.04em;
+        }
+
+        .premium-card {
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .premium-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        .nav-scrolled {
+            background-color: rgba(9, 9, 11, 0.95);
+            backdrop-filter: blur(12px);
+        }
+
+        .feature-icon {
+            transition: all 0.2s ease;
+        }
+        
+        .premium-button {
+            transition: all 0.2s cubic-bezier(0.4, 0.0, 0.2, 1);
+        }
+        
+        .premium-button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="bg-zinc-950 text-zinc-200 antialiased">
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 border-b border-zinc-800 bg-zinc-950/80 backdrop-blur-lg">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center gap-x-3">
+                    <div class="w-9 h-9 bg-white rounded-2xl flex items-center justify-center shadow-inner">
+                        <span class="text-zinc-950 font-semibold text-3xl tracking-[-3px]">A</span>
+                    </div>
+                    <span class="font-semibold text-3xl tracking-[-1.5px]">Aegis</span>
+                </div>
+                
+                <div class="hidden md:flex items-center gap-x-10 text-sm font-medium">
+                    <a href="#problem" class="hover:text-white transition-colors">Problem</a>
+                    <a href="#solution" class="hover:text-white transition-colors">Solution</a>
+                    <a href="#capabilities" class="hover:text-white transition-colors">Capabilities</a>
+                    <a href="#impact" class="hover:text-white transition-colors">Impact</a>
+                </div>
+                
+                <div class="flex items-center gap-x-4">
+                    <a href="#waitlist" 
+                       class="px-6 py-2.5 text-sm font-medium border border-zinc-700 hover:bg-zinc-900 rounded-2xl transition-colors">
+                        Join waitlist
+                    </a>
+                    <a href="#waitlist" 
+                       class="px-6 py-2.5 text-sm font-semibold bg-white text-zinc-950 rounded-2xl hover:bg-zinc-100 transition-colors premium-button">
+                        Get early access
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <div class="pt-20 max-w-7xl mx-auto px-8">
+        <div class="pt-16 pb-20">
+            <div class="max-w-4xl">
+                <div class="inline-flex items-center gap-x-2 px-4 py-1 rounded-full bg-zinc-900 border border-zinc-800 text-sm mb-8">
+                    <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+                    <span class="font-medium text-zinc-400">Building in private • Mumbai</span>
+                </div>
+                
+                <h1 class="text-7xl leading-[1.05] tracking-[-4.5px] font-semibold heading mb-6">
+                    The operating system<br>for trustworthy<br>autonomous agents.
+                </h1>
+                
+                <p class="max-w-xl text-2xl text-zinc-400 tracking-tight mb-10">
+                    Privacy-first infrastructure that gives agents persistent memory, 
+                    verifiable execution, and real governance — without ever compromising control.
+                </p>
+                
+                <div class="flex items-center gap-x-4">
+                    <a href="#waitlist" 
+                       class="px-10 py-4 bg-white text-zinc-950 text-lg font-semibold rounded-3xl hover:bg-zinc-100 transition-all premium-button">
+                        Join private waitlist
+                    </a>
+                    <a href="#solution" 
+                       class="px-8 py-4 border border-zinc-700 hover:bg-zinc-900 text-lg font-medium rounded-3xl transition-colors">
+                        See how it works
+                    </a>
+                </div>
+                
+                <div class="mt-8 text-sm text-zinc-500">
+                    Early stage • Currently building MVP
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Problem Section -->
+    <div id="problem" class="max-w-7xl mx-auto px-8 py-20 border-t border-zinc-800">
+        <div class="max-w-3xl">
+            <div class="uppercase tracking-[3px] text-xs font-semibold text-zinc-500 mb-4">THE PROBLEM</div>
+            <h2 class="section-header tracking-[-2.5px] mb-8">Current AI creates<br>dangerous tradeoffs.</h2>
+            
+            <div class="space-y-6 text-xl text-zinc-400">
+                <p>Most agentic tools force companies to choose between <span class="text-white">capability</span> and <span class="text-white">control</span>.</p>
+                <p>They forget context quickly, hallucinate during critical workflows, and require constant human supervision. 
+                To get real work done, organizations must either expose sensitive data or accept unreliable, unverifiable outputs.</p>
+                <p>This gap is becoming a serious bottleneck for enterprises that want to use autonomous agents at scale.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Solution -->
+    <div id="solution" class="max-w-7xl mx-auto px-8 py-20 border-t border-zinc-800">
+        <div class="grid lg:grid-cols-12 gap-x-16 items-center">
+            <div class="lg:col-span-7">
+                <div class="uppercase tracking-[3px] text-xs font-semibold text-zinc-500 mb-4">THE SOLUTION</div>
+                <h2 class="section-header tracking-[-2.5px] mb-8">A privacy-first operating system<br>for autonomous agents.</h2>
+                
+                <div class="text-xl text-zinc-400 space-y-6 max-w-2xl">
+                    <p>Aegis is the infrastructure layer that makes agentic AI reliable enough for serious business use.</p>
+                    <p>It combines persistent structured memory, multi-agent orchestration, hallucination verification, 
+                    and strict governance — all while keeping every piece of data completely private and under user control.</p>
+                </div>
+            </div>
+            
+            <div class="lg:col-span-5 mt-12 lg:mt-0">
+                <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
+                    <div class="text-sm uppercase tracking-widest text-zinc-500 mb-4">Core Principle</div>
+                    <div class="text-2xl font-semibold tracking-tight leading-tight">
+                        Agents should be powerful,<br>but never unaccountable.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Capabilities -->
+    <div id="capabilities" class="max-w-7xl mx-auto px-8 py-20 border-t border-zinc-800">
+        <div class="flex justify-between items-end mb-12">
+            <div>
+                <div class="uppercase tracking-[3px] text-xs font-semibold text-zinc-500 mb-3">CAPABILITIES</div>
+                <h2 class="section-header tracking-[-2px]">Built for real work,<br>not just conversation.</h2>
+            </div>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Feature Cards -->
+            <div class="premium-card bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
+                <div class="w-12 h-12 bg-zinc-800 rounded-2xl flex items-center justify-center mb-7">
+                    <i class="fa-solid fa-brain text-2xl"></i>
+                </div>
+                <h3 class="font-semibold text-2xl tracking-tight mb-4">Persistent Memory</h3>
+                <p class="text-zinc-400">Maintains deep, structured memory of every detail with timelines and context. No more repeating instructions or losing important information across sessions.</p>
+            </div>
+            
+            <div class="premium-card bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
+                <div class="w-12 h-12 bg-zinc-800 rounded-2xl flex items-center justify-center mb-7">
+                    <i class="fa-solid fa-project-diagram text-2xl"></i>
+                </div>
+                <h3 class="font-semibold text-2xl tracking-tight mb-4">Multi-Agent Orchestration</h3>
+                <p class="text-zinc-400">Specialized agents collaborate to plan, delegate, execute, and report. Complex business processes are broken into reliable, coordinated workflows.</p>
+            </div>
+            
+            <div class="premium-card bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
+                <div class="w-12 h-12 bg-zinc-800 rounded-2xl flex items-center justify-center mb-7">
+                    <i class="fa-solid fa-shield-halved text-2xl"></i>
+                </div>
+                <h3 class="font-semibold text-2xl tracking-tight mb-4">Privacy by Architecture</h3>
+                <p class="text-zinc-400">End-to-end encrypted. Nothing is ever sent to external LLMs or operators. Your data stays completely under your control at all times.</p>
+            </div>
+            
+            <div class="premium-card bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
+                <div class="w-12 h-12 bg-zinc-800 rounded-2xl flex items-center justify-center mb-7">
+                    <i class="fa-solid fa-check-double text-2xl"></i>
+                </div>
+                <h3 class="font-semibold text-2xl tracking-tight mb-4">Hallucination Control</h3>
+                <p class="text-zinc-400">Dedicated verification agents check outputs at every step. Errors or uncertain results automatically escalate to human oversight.</p>
+            </div>
+            
+            <div class="premium-card bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
+                <div class="w-12 h-12 bg-zinc-800 rounded-2xl flex items-center justify-center mb-7">
+                    <i class="fa-solid fa-user-check text-2xl"></i>
+                </div>
+                <h3 class="font-semibold text-2xl tracking-tight mb-4">Governed Execution</h3>
+                <p class="text-zinc-400">No action on third-party systems (Meta Ads, CRMs, etc.) happens without explicit human authorization. Full audit trail included.</p>
+            </div>
+            
+            <div class="premium-card bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
+                <div class="w-12 h-12 bg-zinc-800 rounded-2xl flex items-center justify-center mb-7">
+                    <i class="fa-solid fa-chart-line text-2xl"></i>
+                </div>
+                <h3 class="font-semibold text-2xl tracking-tight mb-4">Structured Analytics</h3>
+                <p class="text-zinc-400">Every execution generates clean, structured data and insights. Companies get real visibility into performance and outcomes.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Impact -->
+    <div id="impact" class="max-w-7xl mx-auto px-8 py-20 border-t border-zinc-800">
+        <div class="max-w-3xl">
+            <div class="uppercase tracking-[3px] text-xs font-semibold text-zinc-500 mb-4">THE OUTCOME</div>
+            <h2 class="section-header tracking-[-2px] mb-8">Run significantly more<br>with significantly less.</h2>
+            
+            <div class="text-xl text-zinc-400 space-y-6">
+                <p>Aegis enables organizations to handle complex, multi-step operations with far fewer people while maintaining higher reliability and complete data ownership.</p>
+                <p>From campaign execution and reporting to internal workflows and decision support — the system is designed to increase both efficiency and control at the same time.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Waitlist -->
+    <div id="waitlist" class="max-w-7xl mx-auto px-8 py-20 border-t border-zinc-800">
+        <div class="max-w-2xl">
+            <h2 class="section-header tracking-[-2px] mb-4">Be among the first.</h2>
+            <p class="text-xl text-zinc-400 mb-8">We're currently building the MVP. Join the private waitlist to get early access and updates as we progress.</p>
+            
+            <div class="flex flex-col sm:flex-row gap-4">
+                <input type="email" id="email" placeholder="Enter your email address" 
+                       class="flex-1 bg-zinc-900 border border-zinc-700 focus:border-zinc-500 transition-colors rounded-3xl px-6 py-4 text-lg outline-none">
+                <button onclick="joinWaitlist()" 
+                        class="px-10 py-4 bg-white text-zinc-950 font-semibold text-lg rounded-3xl hover:bg-zinc-100 transition-all whitespace-nowrap premium-button">
+                    Request early access
+                </button>
+            </div>
+            <p class="text-sm text-zinc-500 mt-4">We respect your inbox. You'll only hear from us when there's something meaningful to share.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-t border-zinc-800 py-10">
+        <div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between gap-y-6 text-sm text-zinc-500">
+            <div>
+                © Aegis • Building in private<br>
+                <span class="text-xs">Mumbai, India</span>
+            </div>
+            <div class="flex gap-x-8">
+                <div>Privacy-first by design</div>
+                <div>Early stage</div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function joinWaitlist() {
+            const email = document.getElementById('email').value;
+            if (!email) {
+                alert("Please enter your email address.");
+                return;
+            }
+            alert("Thank you. We've received your request. We'll reach out soon.");
+            document.getElementById('email').value = '';
+        }
+        
+        // Simple navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('nav-scrolled');
+            } else {
+                nav.classList.remove('nav-scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
