@@ -177,13 +177,13 @@ function makeLetterA() {
   const g = new THREE.Group();
   const bar = new THREE.BoxGeometry(0.18, 1.9, 0.18);
   const left = new THREE.Mesh(bar, chrome);
-  left.rotation.z = 0.34;
+  left.rotation.z = -0.34;
   left.position.set(-0.34, 0.05, 0);
   const right = new THREE.Mesh(bar.clone(), chrome);
-  right.rotation.z = -0.34;
+  right.rotation.z = 0.34;
   right.position.set(0.34, 0.05, 0);
   const cross = new THREE.Mesh(new THREE.BoxGeometry(0.82, 0.14, 0.14), chrome);
-  cross.position.set(0, -0.12, 0);
+  cross.position.set(0, -0.22, 0);
   g.add(left, right, cross);
   return g;
 }
